@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -40,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function App() {
-  const [menuVisible, setMenuVisible] = React.useState(false);
-  const [selectedPage, setSelectedPage] = React.useState("Home");
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [selectedPage, setSelectedPage] = useState("Home");
 
   const classes = useStyles();
 
